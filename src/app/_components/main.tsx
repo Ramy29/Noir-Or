@@ -155,7 +155,7 @@ export default function Main() {
         <div className="w-full lg:w-96 min-h-auto lg:h-96 p-4 md:p-8 space-y-4">
           <h2 className={`${vibes.className} font-semibold text-xl md:text-2xl`}>Qui sommes-nous?</h2>
           <h1 className={`${playfair.className} font-extrabold text-3xl md:text-4xl lg:text-5xl`}>
-            Les meilleurs boissons alcoolisées
+            Les meilleurs boissons alcoolisés
           </h1>
           <p className={`${italiana.className} font-bold text-base md:text-lg`}>
             Notre entreprise incarne lélégance et la passion, offrant des boissons raffinées qui
