@@ -158,8 +158,8 @@ export default function Main() {
             Les meilleurs boissons alcoolisées
           </h1>
           <p className={`${italiana.className} font-bold text-base md:text-lg`}>
-            Notre entreprise incarne l'élégance et la passion, offrant des boissons raffinées qui
-            éveillent les sens et célèbrent l'art de vivre.
+            Notre entreprise incarne lélégance et la passion, offrant des boissons raffinées qui
+            éveillent les sens et célèbrent lart de vivre.
           </p>
           <a href="https://www.instagram.com/alcoholic_kurochan?igsh=YmJyYzg1Nzd3OWs5">
              <Button>visite <FaLongArrowAltRight /></Button>
