@@ -17,6 +17,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: ["400"] });
 
 export default function Main() {
   const imageRef = useRef(null);
+    const heroRef = useRef(null);
   const [isClient, setIsClient] = React.useState(false);
 
   useLayoutEffect(() => {
@@ -30,6 +31,7 @@ export default function Main() {
 
     // Wait for images to load before initializing animations
     const initAnimations = () => {
+        
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".main",
@@ -93,7 +95,7 @@ export default function Main() {
       </div>
 
       {/* Hero section */}
-      <section className="relative hero">
+      <section ref={heroRef} className="relative hero">
         {/* header */}
         <div className="p-4 md:p-10 flex items-center justify-between">
           <h1 className={`${vibes.className} text-xl md:text-2xl text-ring`}>Noir & Or</h1>
@@ -133,7 +135,7 @@ export default function Main() {
         />
         <Image
           ref={imageRef}
-          className="image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-15 w-32 sm:w-40 md:w-52 lg:w-auto"
+          className="image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-5 w-32 sm:w-40 md:w-52 lg:w-auto"
           src="/images/can 4.png"
           alt="Hero image"
           width={250}
@@ -153,11 +155,11 @@ export default function Main() {
       <section className="main p-4 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-8 bg-white">
         {/* Left box */}
         <div className="w-full lg:w-96 min-h-auto lg:h-96 p-4 md:p-8 space-y-4">
-          <h2 className={`${vibes.className} font-semibold text-xl md:text-2xl`}>Qui sommes-nous?</h2>
-          <h1 className={`${playfair.className} font-extrabold text-3xl md:text-4xl lg:text-5xl`}>
+          <h2 className={`${vibes.className} font-semibold text-chart-1 text-xl md:text-2xl`}>Qui sommes-nous?</h2>
+          <h1 className={`${playfair.className} font-extrabold text-chart-2 text-3xl md:text-4xl lg:text-5xl`}>
             Les meilleurs boissons alcoolisés
           </h1>
-          <p className={`${italiana.className} font-bold text-base md:text-lg`}>
+          <p className={`${italiana.className} text-chart-1 font-bold text-base md:text-lg`}>
             Notre entreprise incarne lélégance et la passion, offrant des boissons raffinées qui
             éveillent les sens et célèbrent lart de vivre.
           </p>
