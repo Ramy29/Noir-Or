@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { Great_Vibes, Playfair_Display, Italiana, Oswald } from "next/font/google";
 import Image from "next/image";
 import { FaFacebookF, FaLongArrowAltRight } from "react-icons/fa";
@@ -19,11 +19,11 @@ export default function Main() {
   const imageRef = useRef(null);
   const [isClient, setIsClient] = React.useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setIsClient(true);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!isClient || typeof window === 'undefined') return;
 
     gsap.registerPlugin(ScrollTrigger);
