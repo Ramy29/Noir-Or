@@ -1,15 +1,18 @@
 import type { NextConfig } from "next";
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   images: {
     unoptimized: false,
     remotePatterns: [],
   },
-  // Ensure static assets are properly handled
   webpack: (config) => {
     config.resolve.alias.canvas = false;
+
+    config.cache = false;
     return config;
   },
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
